@@ -112,3 +112,84 @@ pedro.emit('name');
 christina.emit('name');
 ```
 - These are executed synchronously, Pedro first, then Christina
+
+
+---
+## ReadLine-Module
+
+- create `app.js`
+
+`app.js`
+```js
+const readline = readline('readline');
+// create instance of readline interface
+// within brackets, takes in object
+readline.createInterface({<object>})
+```
+
+- within the object will be two properties, a config file
+
+`app.js`
+```js
+const readline = readline('readline');
+// process is global, don't need to req
+readline.createInterface({input : process.stdin,
+                         output : process.stdout})
+```
+- when this is executed it'll return read line variable for use, so save it into a variable
+
+`app.js`
+```js
+const readline = readline('readline');
+// process is global, don't need to req
+const rl = readline.createInterface({input : process.stdin,
+                         output : process.stdout})
+```
+
+- say you want to ask user what two numbers to add
+
+`app.js`
+```js
+const readline = require("readline");
+// process is global, don't need to req
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+// generate random number between 1 and 10
+let num1 = Math.floor(Math.random() * 10 + 1);
+let num2 = Math.floor(Math.random() * 10 + 1);
+let answer = num1 + num2;
+
+// rl interface has method called question, ('string', 'function')
+rl.question(`What is ${num1} + ${num2}?`, (userInput) => {
+  console.log(userInput);
+});
+```
+- Add user input logic
+
+`app.js`
+```js
+const readline = require("readline");
+// process is global, don't need to req
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+// generate random number between 1 and 10
+let num1 = Math.floor(Math.random() * 10 + 1);
+let num2 = Math.floor(Math.random() * 10 + 1);
+let answer = num1 + num2;
+
+// rl interface has method called question, ('string', 'function')
+rl.question(`What is ${num1} + ${num2}?`, (userInput) => {
+  // trim trims whitespace or newline characters
+  if (userInput.trim() == answer) {
+    console.log("correct!");
+    // close app
+    rl.close()
+  }
+});
+```
+
+
