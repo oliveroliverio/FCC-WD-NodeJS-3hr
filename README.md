@@ -111,4 +111,4 @@ pedro.on('name', ()=>{
 pedro.emit('name');
 christina.emit('name');
 ```
-- These
+- These are executed synchronously, Pedro first, then Christina
