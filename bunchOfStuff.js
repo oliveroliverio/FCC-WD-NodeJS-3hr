@@ -13,8 +13,11 @@ class SomeMathObject{
 
 // 20211121 5:52pm now to add to exports, add as properties to export object
 
-module.exports.sum=sum;
-module.exports.PI=PI;
-module.exports.SomeMathObject=SomeMathObject;
+// module.exports.sum=sum;
+// module.exports.PI=PI;
+// module.exports.SomeMathObject=SomeMathObject;
 
 // now go to the app.js and console log these
+
+// ----------cleaner way of exporting above-----------
+module.exports = {sum:sum, PI:PI, SomeMathObject:SomeMathObject};
