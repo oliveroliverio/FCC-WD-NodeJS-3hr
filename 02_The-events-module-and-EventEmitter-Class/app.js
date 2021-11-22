@@ -23,3 +23,26 @@ eventEmitter.on('tutorial', (num1, num2)=> {
 
 // -------------call emit method with parameters------
 eventEmitter.emit('tutorial', 123,2,)
+
+// ----------how do i create a custom object that uses events, you can inherit from event emitter class
+class Person extends EventEmitter{
+  constructor(name){
+    // call super function, which allows you to use the 'this' property of the class
+    super();
+    this._name = name;
+  }
+  // add getters and setters
+  get name(){
+    return this._name;
+  }
+}
+
+// -------- create new instance of class
+let pedro = new Person('Pedro');
+// note person extends eventEmitter class, so you can add a listener to Pedro object
+pedro.on('name', ()=>{
+  console.log('my name is ' + pedro.name);
+});
+
+// call emit method and pass in 'name'
+pedro.emit('name')
