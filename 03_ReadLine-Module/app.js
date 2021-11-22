@@ -16,8 +16,9 @@ rl.question(`What is ${num1} + ${num2}?`, (userInput) => {
     console.log("correct!");
     // close app
     rl.close();
-  } else {
-    console.log("you dum dum");
-    rl.close();
-  }
+  };
+});
+
+rl.on('close',()=>{
+  console.log('Correct!!!');
 });
