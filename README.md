@@ -18,3 +18,10 @@ console.log(sumFunction)
 // use the function
 console.log(sumFunction(3,3))
 ```
+
+update these later
+
+---
+
+## The-events-module-and-EventEmitter-Class
+Here we can bring event driven programming to nodejs
