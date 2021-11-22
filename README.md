@@ -1,6 +1,6 @@
 # [NodeJS full 3hr tutorial](youtube.com/watch?v=RLtyhwFtXQA&t=9323s)
 
-## Functions
+## Working with modules
 Make custom Functions
 
 `sumFunction.js`
