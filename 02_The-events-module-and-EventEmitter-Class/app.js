@@ -17,6 +17,9 @@ eventEmitter.emit('tutorial');
 
 // ---------If we want the arrow function to have parameters-------------
 
-eventEmitter.on('tutorial', ()=> {
-  console.log('tutorial event occurred');
+eventEmitter.on('tutorial', (num1, num2)=> {
+  console.log(num1 + num2);
 });
+
+// -------------call emit method with parameters------
+eventEmitter.emit('tutorial', 123,2,)
