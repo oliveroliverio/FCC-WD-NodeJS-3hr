@@ -16,7 +16,11 @@ rl.question(`What is ${num1} + ${num2}?`, (userInput) => {
     console.log("correct!");
     // close app
     rl.close();
-  };
+  } else {
+    rl.setPrompt('Incorrect, try again\n');
+    // now need to call prompt
+    rl.prompt();
+  }
 });
 
 rl.on('close',()=>{
