@@ -1,5 +1,8 @@
-const sumFunction = require("./sumFunction");
+const stuff = require("./bunchOfStuff");
 // view the imported function
-console.log(sumFunction);
+console.log(stuff);
 // use the function
-console.log(sumFunction(3, 3));
+console.log(stuff.sum(3, 3));
+// console loggin a bunh of bunchOfStuff
+console.log(stuff.PI);
+console.log(new stuff.SomeMathObject());
